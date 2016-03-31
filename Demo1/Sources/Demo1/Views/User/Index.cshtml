@@ -1,0 +1,40 @@
+﻿<div class="row">
+    <div class="col-md-6 bg-1 profile-box">
+        <h3>Login</h3>
+        <form class="form-inline" action="/User/Login" method="post">
+            <div class="row input-field">
+                <label class="col-md-offset-4 col-md-2 form-label">Username</label>
+                <input id="loginUserField" type="text" class="col-md-2 form-control" name="UserName"/>
+            </div>
+            <div class="row input-field">
+                <label class="col-md-offset-4 col-md-2 form-label">Password</label>
+                <input id="loginPasswordField" type="password" class="col-md-2 form-control" name="Password"/>
+            </div>
+            <div class="col-md-12">
+                <input id="loginSubmitButton" class="btn btn-default btn-lg" type="submit" value="Login"/>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6 bg-2 profile-box">
+        <h3>Register</h3>
+        <form class="form-inline" action="/User/Register" method="post">
+            <div class="row input-field">
+                <label class="col-md-offset-4 col-md-2 form-label">Username</label>
+                <input id="registerUserField" type="text" class="col-md-2 form-control" name="UserName"/>
+            </div>
+            <div class="row input-field">
+                <label class="col-md-offset-4 col-md-2 form-label">Password</label>
+                <input id="registerPasswordField" type="password" class="col-md-2 form-control" name="Password"/>
+            </div>
+            <div class="col-md-12">
+                <input id="registerSubmitButton" class="btn btn-default btn-lg" type="submit" value="Register"/>
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewBag.Error != null)
+{
+    <div class="container-fluid bg-error text-center">
+        <h3>@ViewBag.Error</h3>
+    </div>
+}
