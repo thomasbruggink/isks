@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
 using System.Text;
 using Engine.EventHandlers;
 using Newtonsoft.Json;
@@ -9,8 +6,8 @@ using Newtonsoft.Json;
 namespace Engine
 {
     /// <summary>
-    /// Listener class for registering and listening
-    /// for events.s
+    ///     Listener class for registering and listening
+    ///     for events.s
     /// </summary>
     public class EventListener
     {
@@ -22,7 +19,21 @@ namespace Engine
         }
 
         /// <summary>
-        /// Subscribe an eventhandler to start receiving messages
+        ///     Get the subscribed eventhandlers
+        /// </summary>
+        public IEnumerable<IEventHandler> EventHandlers
+        {
+            get
+            {
+                lock (_eventHandlers)
+                {
+                    return _eventHandlers;
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Subscribe an eventhandler to start receiving messages
         /// </summary>
         /// <param name="eventHandler"></param>
         public void SubscribeEventHandler(IEventHandler eventHandler)
@@ -34,7 +45,7 @@ namespace Engine
         }
 
         /// <summary>
-        /// Unsubscribe an eventhandler
+        ///     Unsubscribe an eventhandler
         /// </summary>
         /// <param name="eventHandler"></param>
         public void UnsubscribeEventHandler(IEventHandler eventHandler)
@@ -50,25 +61,10 @@ namespace Engine
         }
 
         /// <summary>
-        /// Get the subscribed eventhandlers
-        /// </summary>
-        public IEnumerable<IEventHandler> EventHandlers
-        {
-            get
-            {
-                lock (_eventHandlers)
-                {
-                    return _eventHandlers;
-                }
-            }
-        }
-
-        /// <summary>
-        /// This function would normally connect to an eventbus and listen for messages
+        ///     This function would normally connect to an eventbus and listen for messages
         /// </summary>
         public void SetupConnection()
         {
-
         }
 
         public void HandleMessage(byte[] data)

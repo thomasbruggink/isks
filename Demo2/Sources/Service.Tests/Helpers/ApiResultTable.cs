@@ -4,13 +4,11 @@ using System.Net.Http;
 namespace Service.Tests.Helpers
 {
     /// <summary>
-    /// A class used to store responses from WebAPIs during a scenario.
+    ///     A class used to store responses from WebAPIs during a scenario.
     /// </summary>
     public class ApiResultTable
     {
         private static ApiResultTable _instance;
-
-        public static ApiResultTable Instance => _instance ?? (_instance = new ApiResultTable());
 
         private readonly Dictionary<string, HttpResponseMessage> _nameResult;
 
@@ -19,8 +17,10 @@ namespace Service.Tests.Helpers
             _nameResult = new Dictionary<string, HttpResponseMessage>();
         }
 
+        public static ApiResultTable Instance => _instance ?? (_instance = new ApiResultTable());
+
         /// <summary>
-        /// Adds a result to the internal dictionary.
+        ///     Adds a result to the internal dictionary.
         /// </summary>
         /// <param name="name">The dictionary key</param>
         /// <param name="result">The dictionary value</param>
@@ -30,7 +30,7 @@ namespace Service.Tests.Helpers
         }
 
         /// <summary>
-        /// Retrieves the value that belongs to the specified key.
+        ///     Retrieves the value that belongs to the specified key.
         /// </summary>
         /// <param name="name">The dictionary key</param>
         /// <returns>The HttpResponseMessage that belongs to the specified key.</returns>
@@ -40,7 +40,7 @@ namespace Service.Tests.Helpers
         }
 
         /// <summary>
-        /// Updates the value that belongs to the specified key.
+        ///     Updates the value that belongs to the specified key.
         /// </summary>
         /// <param name="name">The dictionary key</param>
         /// <param name="result">The result to store</param>
@@ -50,7 +50,7 @@ namespace Service.Tests.Helpers
         }
 
         /// <summary>
-        /// Destroys the current instance.
+        ///     Destroys the current instance.
         /// </summary>
         public static void Reset()
         {

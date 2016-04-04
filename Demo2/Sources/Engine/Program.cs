@@ -5,9 +5,9 @@ using Engine.EventHandlers;
 
 namespace Engine
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var eventListener = new EventListener();
 
@@ -26,10 +26,7 @@ namespace Engine
 
             // When the user presses Ctrl+C the application should close
             // To do this, the Ctrl+C handler is implemented here and sets a wait handle to enable the application to close.
-            Console.CancelKeyPress += (s, e) =>
-            {
-                handle.Set();
-            };
+            Console.CancelKeyPress += (s, e) => { handle.Set(); };
 
             handle.WaitOne();
 

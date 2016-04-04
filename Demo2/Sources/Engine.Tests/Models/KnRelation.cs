@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Engine.Tests.Models
@@ -11,6 +7,7 @@ namespace Engine.Tests.Models
     {
         [JsonProperty("type")]
         public string Type { get; set; }
+
         [JsonProperty("data")]
         public Dictionary<string, double> Data { get; set; }
     }

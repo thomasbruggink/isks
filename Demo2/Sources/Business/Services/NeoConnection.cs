@@ -4,16 +4,11 @@ using Neo4jClient;
 namespace Business.Services
 {
     /// <summary>
-    /// Connection to the neo4j database
+    ///     Connection to the neo4j database
     /// </summary>
     public class NeoConnection
     {
         private static NeoConnection _connection;
-
-        public static NeoConnection GetConnection()
-        {
-            return _connection ?? (_connection = new NeoConnection("neo4j", "knownow", "localhost", 7474));
-        }
 
         /// <summary>
         ///     Setup the connection to the neo4j database based on the settings specified in the Settings object
@@ -32,5 +27,10 @@ namespace Business.Services
         ///     Instance of the GraphClient to connect to the neo4j database
         /// </summary>
         public GraphClient GraphClient { get; }
+
+        public static NeoConnection GetConnection()
+        {
+            return _connection ?? (_connection = new NeoConnection("neo4j", "knownow", "localhost", 7474));
+        }
     }
 }

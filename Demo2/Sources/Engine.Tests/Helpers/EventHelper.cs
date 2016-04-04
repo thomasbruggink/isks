@@ -9,8 +9,8 @@ namespace Engine.Tests.Helpers
         {
             var message = new
             {
-                key = key,
-                content = content
+                key,
+                content
             };
 
             var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));

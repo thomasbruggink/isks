@@ -9,7 +9,7 @@ namespace Service.Tests.Bindings
         [When(@"'(.*)' requests his reads")]
         public void WhenRequestsHisReads(string user)
         {
-            TestWebSender.Send((webClient) =>
+            TestWebSender.Send(webClient =>
             {
                 var uri = $"/api/read/{user}";
                 var response = webClient.GetAsync(uri).Result;

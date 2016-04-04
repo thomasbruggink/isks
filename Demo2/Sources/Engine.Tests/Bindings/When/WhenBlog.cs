@@ -16,7 +16,7 @@ namespace Engine.Tests.Bindings.When
                 var name = tableRow["Name"];
                 var writer = tableRow["Writer"];
 
-                var blogCreatedEvent = EventHelper.CreateEvent("blogCreated", new {name = name, writer = writer});
+                var blogCreatedEvent = EventHelper.CreateEvent("blogCreated", new {name, writer});
 
                 eventListener.HandleMessage(blogCreatedEvent);
             }
@@ -32,7 +32,7 @@ namespace Engine.Tests.Bindings.When
                 var reader = tableRow["Reader"];
                 var blogName = tableRow["Blog Name"];
 
-                var blogReadEvent = EventHelper.CreateEvent("blogRead", new { reader = reader, blogName = blogName });
+                var blogReadEvent = EventHelper.CreateEvent("blogRead", new {reader, blogName});
 
                 eventListener.HandleMessage(blogReadEvent);
             }

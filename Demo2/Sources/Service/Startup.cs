@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
@@ -15,12 +10,12 @@ using Owin;
 namespace Service
 {
     /// <summary>
-    /// The owin startup class
+    ///     The owin startup class
     /// </summary>
     public class Startup
     {
         /// <summary>
-        /// This method will setup and store the configuration
+        ///     This method will setup and store the configuration
         /// </summary>
         /// <param name="app"></param>
         public void Configuration(IAppBuilder app)

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Service.Tests.Helpers;
@@ -8,7 +7,7 @@ using TechTalk.SpecFlow;
 namespace Service.Tests.Bindings.Then
 {
     [Binding]
-    class ThenBlog
+    internal class ThenBlog
     {
         [Then(@"The following blogs are returned")]
         public void ThenTheFollowingBlogsAreReturned(Table table)
@@ -16,7 +15,7 @@ namespace Service.Tests.Bindings.Then
             var response = ApiResultTable.Instance.GetResultByName("reads");
             var responseData = response.Content.ReadAsStringAsync().Result;
 
-            Assert.AreEqual(200, (int)response.StatusCode, $"Received the following error: '{responseData}'");
+            Assert.AreEqual(200, (int) response.StatusCode, $"Received the following error: '{responseData}'");
             var blogs = JsonConvert.DeserializeObject<string[]>(responseData);
             Assert.AreEqual(table.Rows.Count, blogs.Length, "Received a different amount of blogs");
 

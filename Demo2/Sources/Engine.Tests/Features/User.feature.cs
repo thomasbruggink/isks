@@ -8,96 +8,107 @@
 //      the code is regenerated.
 //  </auto-generated>
 // ------------------------------------------------------------------------------
+
 #region Designer generated code
+
+using TechTalk.SpecFlow;
+
 #pragma warning disable
+
 namespace Engine.Tests.Features
 {
-    using TechTalk.SpecFlow;
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
     public partial class UserFeature
     {
-        
         private static TechTalk.SpecFlow.ITestRunner testRunner;
-        
-#line 1 "User.feature"
-#line hidden
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "User", "\tTo make sure blog events are handled correctly I want to make sure they are stor" +
-                    "ed correctly in Neo4j", ProgrammingLanguage.CSharp, ((string[])(null)));
+            var featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "User",
+                "\tTo make sure blog events are handled correctly I want to make sure they are stor" +
+                "ed correctly in Neo4j", ProgrammingLanguage.CSharp, ((string[]) (null)));
             testRunner.OnFeatureStart(featureInfo);
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
-            if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "User")))
+            if (((testRunner.FeatureContext != null)
+                 && (testRunner.FeatureContext.FeatureInfo.Title != "User")))
             {
-                Engine.Tests.Features.UserFeature.FeatureSetup(null);
+                FeatureSetup(null);
             }
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
         }
-        
+
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
         }
-        
+
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User created")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("user")]
         public virtual void UserCreated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User created", new string[] {
-                        "user"});
+            var scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User created", new string[]
+            {
+                "user"
+            });
 #line 5
-this.ScenarioSetup(scenarioInfo);
+            this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name"});
-            table1.AddRow(new string[] {
-                        "Thomas"});
+            var table1 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Name"
+            });
+            table1.AddRow(new string[]
+            {
+                "Thomas"
+            });
 #line 6
- testRunner.When("The following user created event is send", ((string)(null)), table1, "When ");
+            testRunner.When("The following user created event is send", ((string) (null)), table1, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Node",
-                        "Name"});
-            table2.AddRow(new string[] {
-                        "User",
-                        "Thomas"});
+            var table2 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Node",
+                "Name"
+            });
+            table2.AddRow(new string[]
+            {
+                "User",
+                "Thomas"
+            });
 #line 9
- testRunner.Then("I expect the following nodes:", ((string)(null)), table2, "Then ");
+            testRunner.Then("I expect the following nodes:", ((string) (null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
     }
 }
+
 #pragma warning restore
+
 #endregion

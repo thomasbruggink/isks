@@ -48,14 +48,15 @@ namespace Engine.Tests.Bindings.Then
                 }
 
 
-                Assert.AreEqual(attributeList.Count, relation.Data.Count, "Expected different amount of attributes from '{0}:{1}' :{2} '{3}:{4}'",
+                Assert.AreEqual(attributeList.Count, relation.Data.Count,
+                    "Expected different amount of attributes from '{0}:{1}' :{2} '{3}:{4}'",
                     fromNode, fromName, relationName, toNode, toName);
 
                 foreach (var attribute in attributeList)
                 {
                     Assert.IsTrue(relation.Data
                         .Any(a => a.Key.Equals(attribute.Key)
-                        && a.Value.Equals(attribute.Value)),
+                                  && a.Value.Equals(attribute.Value)),
                         "Could not find attribute '{0}' with value '{1}' on relation '{2}' from node '{3}' with value '{4}' to node '{5}' with value '{6}'"
                         , attribute.Key, attribute.Value, relationName, fromNode, fromName, toNode, toName);
                 }

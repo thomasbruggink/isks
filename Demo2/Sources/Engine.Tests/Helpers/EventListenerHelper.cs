@@ -9,7 +9,7 @@ namespace Engine.Tests.Helpers
 
         public static EventListener GetEventListener()
         {
-            var eventListener = (EventListener)ScenarioContext.Current[Key];
+            var eventListener = (EventListener) ScenarioContext.Current[Key];
             return eventListener;
         }
 

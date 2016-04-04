@@ -15,7 +15,7 @@ namespace Engine.Tests.Bindings.When
             {
                 var name = tableRow["Name"];
 
-                var userCreatedEvent = EventHelper.CreateEvent("userCreated", new {name = name});
+                var userCreatedEvent = EventHelper.CreateEvent("userCreated", new {name});
 
                 eventHandler.HandleMessage(userCreatedEvent);
             }

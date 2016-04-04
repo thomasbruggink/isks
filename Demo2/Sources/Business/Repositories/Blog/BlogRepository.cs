@@ -17,8 +17,8 @@ namespace Business.Repositories.Blog
                 .CreateUnique("(u)-[:CREATED]->(b)")
                 .WithParams(new Dictionary<string, object>
                 {
-                    { "name", name},
-                    { "writer", writer}
+                    {"name", name},
+                    {"writer", writer}
                 })
                 .ExecuteWithoutResults();
         }
@@ -31,8 +31,8 @@ namespace Business.Repositories.Blog
                 .CreateUnique("(u)-[:READ]->(b)")
                 .WithParams(new Dictionary<string, object>
                 {
-                    { "name", blogName},
-                    { "reader", reader}
+                    {"name", blogName},
+                    {"reader", reader}
                 })
                 .ExecuteWithoutResults();
         }

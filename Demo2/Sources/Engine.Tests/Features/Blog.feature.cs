@@ -8,217 +8,264 @@
 //      the code is regenerated.
 //  </auto-generated>
 // ------------------------------------------------------------------------------
+
 #region Designer generated code
+
+using TechTalk.SpecFlow;
+
 #pragma warning disable
+
 namespace Engine.Tests.Features
 {
-    using TechTalk.SpecFlow;
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
     public partial class BlogFeature
     {
-        
         private static TechTalk.SpecFlow.ITestRunner testRunner;
-        
-#line 1 "Blog.feature"
-#line hidden
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Blog", "\tTo make sure blog events are handled correctly I want to make sure they are stor" +
-                    "ed correctly in Neo4j", ProgrammingLanguage.CSharp, ((string[])(null)));
+            var featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Blog",
+                "\tTo make sure blog events are handled correctly I want to make sure they are stor" +
+                "ed correctly in Neo4j", ProgrammingLanguage.CSharp, ((string[]) (null)));
             testRunner.OnFeatureStart(featureInfo);
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
-            if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Blog")))
+            if (((testRunner.FeatureContext != null)
+                 && (testRunner.FeatureContext.FeatureInfo.Title != "Blog")))
             {
-                Engine.Tests.Features.BlogFeature.FeatureSetup(null);
+                FeatureSetup(null);
             }
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
         }
-        
+
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
         }
-        
+
         public virtual void ScenarioCleanup()
         {
             testRunner.CollectScenarioErrors();
         }
-        
+
         public virtual void FeatureBackground()
         {
 #line 4
 #line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name"});
-            table1.AddRow(new string[] {
-                        "Thomas"});
-            table1.AddRow(new string[] {
-                        "Wiljag"});
+            var table1 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Name"
+            });
+            table1.AddRow(new string[]
+            {
+                "Thomas"
+            });
+            table1.AddRow(new string[]
+            {
+                "Wiljag"
+            });
 #line 5
- testRunner.Given("The following user created events have been sent", ((string)(null)), table1, "Given ");
+            testRunner.Given("The following user created events have been sent", ((string) (null)), table1, "Given ");
 #line hidden
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create blog")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Blog")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("blog")]
         public virtual void CreateBlog()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create blog", new string[] {
-                        "blog"});
+            var scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create blog", new string[]
+            {
+                "blog"
+            });
 #line 11
-this.ScenarioSetup(scenarioInfo);
+            this.ScenarioSetup(scenarioInfo);
 #line 4
-this.FeatureBackground();
+            this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name",
-                        "Writer"});
-            table2.AddRow(new string[] {
-                        "Dit is mijn eerste blog",
-                        "Thomas"});
-            table2.AddRow(new string[] {
-                        "De blog over de ISKS 2016",
-                        "Wiljag"});
+            var table2 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Name",
+                "Writer"
+            });
+            table2.AddRow(new string[]
+            {
+                "Dit is mijn eerste blog",
+                "Thomas"
+            });
+            table2.AddRow(new string[]
+            {
+                "De blog over de ISKS 2016",
+                "Wiljag"
+            });
 #line 12
- testRunner.When("The following blog created events are send", ((string)(null)), table2, "When ");
+            testRunner.When("The following blog created events are send", ((string) (null)), table2, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Node",
-                        "Name"});
-            table3.AddRow(new string[] {
-                        "Blog",
-                        "Dit is mijn eerste blog"});
-            table3.AddRow(new string[] {
-                        "Blog",
-                        "De blog over de ISKS 2016"});
+            var table3 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Node",
+                "Name"
+            });
+            table3.AddRow(new string[]
+            {
+                "Blog",
+                "Dit is mijn eerste blog"
+            });
+            table3.AddRow(new string[]
+            {
+                "Blog",
+                "De blog over de ISKS 2016"
+            });
 #line 16
- testRunner.Then("I expect the following nodes:", ((string)(null)), table3, "Then ");
+            testRunner.Then("I expect the following nodes:", ((string) (null)), table3, "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                        "From Node",
-                        "From Name",
-                        "To Node",
-                        "To Name",
-                        "RelationName",
-                        "Attributes"});
-            table4.AddRow(new string[] {
-                        "User",
-                        "Thomas",
-                        "Blog",
-                        "Dit is mijn eerste blog",
-                        "CREATED",
-                        "-"});
-            table4.AddRow(new string[] {
-                        "User",
-                        "Wiljag",
-                        "Blog",
-                        "De blog over de ISKS 2016",
-                        "CREATED",
-                        "-"});
+            var table4 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "From Node",
+                "From Name",
+                "To Node",
+                "To Name",
+                "RelationName",
+                "Attributes"
+            });
+            table4.AddRow(new string[]
+            {
+                "User",
+                "Thomas",
+                "Blog",
+                "Dit is mijn eerste blog",
+                "CREATED",
+                "-"
+            });
+            table4.AddRow(new string[]
+            {
+                "User",
+                "Wiljag",
+                "Blog",
+                "De blog over de ISKS 2016",
+                "CREATED",
+                "-"
+            });
 #line 20
- testRunner.And("I expect the following relations:", ((string)(null)), table4, "And ");
+            testRunner.And("I expect the following relations:", ((string) (null)), table4, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "From Node",
-                        "From Name",
-                        "To Node",
-                        "To Name",
-                        "RelationName"});
-            table5.AddRow(new string[] {
-                        "User",
-                        "Wiljag",
-                        "Blog",
-                        "Dit is mijn eerste blog",
-                        "CREATED"});
-            table5.AddRow(new string[] {
-                        "User",
-                        "Thomas",
-                        "Blog",
-                        "De blog over de ISKS 2016",
-                        "CREATED"});
+            var table5 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "From Node",
+                "From Name",
+                "To Node",
+                "To Name",
+                "RelationName"
+            });
+            table5.AddRow(new string[]
+            {
+                "User",
+                "Wiljag",
+                "Blog",
+                "Dit is mijn eerste blog",
+                "CREATED"
+            });
+            table5.AddRow(new string[]
+            {
+                "User",
+                "Thomas",
+                "Blog",
+                "De blog over de ISKS 2016",
+                "CREATED"
+            });
 #line 24
- testRunner.And("I expect not to see the following relations:", ((string)(null)), table5, "And ");
+            testRunner.And("I expect not to see the following relations:", ((string) (null)), table5, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
-        
+
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Read blog")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Blog")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("blog")]
         public virtual void ReadBlog()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read blog", new string[] {
-                        "blog"});
+            var scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Read blog", new string[]
+            {
+                "blog"
+            });
 #line 30
-this.ScenarioSetup(scenarioInfo);
+            this.ScenarioSetup(scenarioInfo);
 #line 4
-this.FeatureBackground();
+            this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name",
-                        "Writer"});
-            table6.AddRow(new string[] {
-                        "Dit is mijn eerste blog",
-                        "Thomas"});
+            var table6 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Name",
+                "Writer"
+            });
+            table6.AddRow(new string[]
+            {
+                "Dit is mijn eerste blog",
+                "Thomas"
+            });
 #line 31
- testRunner.Given("The following blog created events have been sent", ((string)(null)), table6, "Given ");
+            testRunner.Given("The following blog created events have been sent", ((string) (null)), table6, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Reader",
-                        "Blog Name"});
-            table7.AddRow(new string[] {
-                        "Wiljag",
-                        "Dit is mijn eerste blog"});
+            var table7 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "Reader",
+                "Blog Name"
+            });
+            table7.AddRow(new string[]
+            {
+                "Wiljag",
+                "Dit is mijn eerste blog"
+            });
 #line 34
- testRunner.When("The following blog read events are send", ((string)(null)), table7, "When ");
+            testRunner.When("The following blog read events are send", ((string) (null)), table7, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                        "From Node",
-                        "From Name",
-                        "To Node",
-                        "To Name",
-                        "RelationName",
-                        "Attributes"});
-            table8.AddRow(new string[] {
-                        "User",
-                        "Wiljag",
-                        "Blog",
-                        "Dit is mijn eerste blog",
-                        "READ",
-                        "-"});
+            var table8 = new TechTalk.SpecFlow.Table(new string[]
+            {
+                "From Node",
+                "From Name",
+                "To Node",
+                "To Name",
+                "RelationName",
+                "Attributes"
+            });
+            table8.AddRow(new string[]
+            {
+                "User",
+                "Wiljag",
+                "Blog",
+                "Dit is mijn eerste blog",
+                "READ",
+                "-"
+            });
 #line 37
- testRunner.Then("I expect the following relations:", ((string)(null)), table8, "Then ");
+            testRunner.Then("I expect the following relations:", ((string) (null)), table8, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
     }
 }
+
 #pragma warning restore
+
 #endregion

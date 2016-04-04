@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Web.Http;
 using Business.Repositories.Blog;
-using Newtonsoft.Json;
 
 namespace Service.Controllers
 {

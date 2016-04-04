@@ -29,8 +29,8 @@ namespace Engine.Tests.Bindings.Given
             {
                 var blogName = tableRow["Blog Name"];
                 var reader = tableRow["Reader"];
-                
-                blogRepository.BlogRead(reader, blogName);       
+
+                blogRepository.BlogRead(reader, blogName);
             }
         }
     }
