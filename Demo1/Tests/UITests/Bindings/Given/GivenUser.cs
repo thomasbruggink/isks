@@ -1,7 +1,4 @@
 ﻿using TechTalk.SpecFlow;
-using UITests.Pages;
-using UITests.Pages.Blog;
-using UITests.Pages.User;
 using UITests.TestSupport.Models;
 
 namespace UITests.Bindings.Given

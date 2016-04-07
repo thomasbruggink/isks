@@ -125,10 +125,13 @@ this.FeatureBackground();
  testRunner.When("\'Wiljag\' requests his reads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "User",
                         "Name"});
             table4.AddRow(new string[] {
+                        "Wiljag",
                         "Dit is mijn eerste blog"});
             table4.AddRow(new string[] {
+                        "Wiljag",
                         "Deze blog heeft informatie over Test Automation"});
 #line 22
  testRunner.Then("The following blogs are returned", ((string)(null)), table4, "Then ");
@@ -170,10 +173,13 @@ this.FeatureBackground();
  testRunner.And("\'Wiljag\' requests his reads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "User",
                         "Name"});
             table7.AddRow(new string[] {
+                        "Wiljag",
                         "Dit is mijn eerste blog"});
             table7.AddRow(new string[] {
+                        "Wiljag",
                         "Deze blog heeft informatie over Test Automation"});
 #line 36
  testRunner.Then("The following blogs are returned", ((string)(null)), table7, "Then ");

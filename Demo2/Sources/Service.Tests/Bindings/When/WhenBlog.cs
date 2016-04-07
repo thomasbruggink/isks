@@ -1,7 +1,7 @@
 ﻿using Service.Tests.Helpers;
 using TechTalk.SpecFlow;
 
-namespace Service.Tests.Bindings
+namespace Service.Tests.Bindings.When
 {
     [Binding]
     public class WhenBlog
@@ -13,7 +13,7 @@ namespace Service.Tests.Bindings
             {
                 var uri = $"/api/read/{user}";
                 var response = webClient.GetAsync(uri).Result;
-                ApiResultTable.Instance.AddResult("reads", response);
+                ApiResultTable.Instance.AddResult(user, response);
             });
         }
     }

@@ -20,9 +20,9 @@ Scenario: Request the read articles for a user
 		| Wiljag | Deze blog heeft informatie over Test Automation |
 	When 'Wiljag' requests his reads
 	Then The following blogs are returned
-		| Name                                            |
-		| Dit is mijn eerste blog                         |
-		| Deze blog heeft informatie over Test Automation |
+		| User   | Name                                            |
+		| Wiljag | Dit is mijn eerste blog                         |
+		| Wiljag | Deze blog heeft informatie over Test Automation |
 
 @blog
 Scenario: Reading a blog will show up in the read blogs list
@@ -34,6 +34,6 @@ Scenario: Reading a blog will show up in the read blogs list
 		| Wiljag | Deze blog heeft informatie over Test Automation |
 	And 'Wiljag' requests his reads
 	Then The following blogs are returned
-		| Name                                            |
-		| Dit is mijn eerste blog                         |
-		| Deze blog heeft informatie over Test Automation |
+		| User   | Name                                            |
+		| Wiljag | Dit is mijn eerste blog                         |
+		| Wiljag | Deze blog heeft informatie over Test Automation |
