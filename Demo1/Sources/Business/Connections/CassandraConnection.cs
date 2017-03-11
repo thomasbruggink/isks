@@ -13,11 +13,9 @@ namespace Business.Connections
         private const int RetryCount = 5;
         public const string KeySpace = "rdwdemo";
 
-        private const string Ip = "localhost";
-
         private CassandraConnection()
         {
-            _cluster = Cluster.Builder().AddContactPoint(Ip).Build();
+            _cluster = Cluster.Builder().AddContactPoint(Configuration.Instance.CassandraEndpoint).Build();
             var tryCount = 0;
             while (tryCount < RetryCount)
             {
@@ -31,7 +29,7 @@ namespace Business.Connections
                     tryCount++;
                 }
             }
-            throw new Exception(string.Format("Unable to connect to cassandra at '{0}'", Ip));
+            throw new Exception(string.Format("Unable to connect to cassandra at '{0}'", Configuration.Instance.CassandraEndpoint));
         }
 
         private static CassandraConnection _connection;
@@ -43,7 +41,7 @@ namespace Business.Connections
 
         public CassandraConnection(string keyspace)
         {
-            _cluster = Cluster.Builder().AddContactPoint(Ip).Build();
+            _cluster = Cluster.Builder().AddContactPoint(Configuration.Instance.CassandraEndpoint).Build();
             _session = _cluster.Connect(keyspace);
         }
 

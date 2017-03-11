@@ -1,0 +1,22 @@
+{"@timestamp":"2017-03-11T15:11:25.6333631+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:13:35.0022390+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:13:38.3163417+01:00","level":"Information","messageTemplate":"{username} login failed","message":"\"thomas\" login failed","fields":{"username":"thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:28:59.9853594+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:29:21.3863285+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:29:24.9874388+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:32.1019747+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:42.8573837+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:44.9004548+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:47.5390801+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:48.5935984+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:48.6080945+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:49.6316509+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:50.2275635+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:50.2385602+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:30:50.7490611+01:00","level":"Information","messageTemplate":"/index","message":"/index","fields":{"servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:40:11.6723903+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:40:13.4962097+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:43:00.5512552+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:43:02.1910167+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:47:33.2981110+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}
+{"@timestamp":"2017-03-11T15:47:34.8676634+01:00","level":"Information","messageTemplate":"{username} logged in","message":"\"Thomas\" logged in","fields":{"username":"Thomas","servicename":"DemoApp","servername":"DESKTOP-4UAP0PP"}}

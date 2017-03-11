@@ -3,6 +3,7 @@ using System.Web;
 using System.Web.Mvc;
 using Business.Repositories;
 using Demo1.Models;
+using Serilog;
 
 namespace Demo1.Controllers
 {
@@ -27,6 +28,7 @@ namespace Demo1.Controllers
             var user = _userRepository.Login(loginModel.UserName, loginModel.Password);
             if (user == null)
             {
+                Log.Information("{username} login failed", loginModel.UserName);
                 ViewBag.Error = "Invalid username or password";
                 return View("Index");
             }
