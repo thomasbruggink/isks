@@ -11,9 +11,9 @@ namespace Business.Connections
         private readonly Cluster _cluster;
         private readonly ISession _session;
         private const int RetryCount = 5;
-        public const string KeySpace = "isksdemo1";
+        public const string KeySpace = "rdwdemo";
 
-        private const string Ip = "192.168.1.11";
+        private const string Ip = "localhost";
 
         private CassandraConnection()
         {

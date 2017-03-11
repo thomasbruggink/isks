@@ -1,5 +1,4 @@
-﻿using InfoSupport.Tessler.Core;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace UITests.Pages.User.Parts
 {
@@ -7,21 +6,21 @@ namespace UITests.Pages.User.Parts
     {
         public UserLoginPart UserName(string userName)
         {
-            var inputField = Driver.GetDriver().FindElement(By.Id("loginUserField"));
+            var inputField = AssemblyConfiguration.Driver.FindElement(By.Id("loginUserField"));
             inputField.SendKeys(userName);;
             return this;
         }
 
         public UserLoginPart Password(string password)
         {
-            var inputField = Driver.GetDriver().FindElement(By.Id("loginPasswordField"));
+            var inputField = AssemblyConfiguration.Driver.FindElement(By.Id("loginPasswordField"));
             inputField.SendKeys(password);
             return this;
         }
 
         public void Register()
         {
-            var submitButton = Driver.GetDriver().FindElement(By.Id("loginSubmitButton"));
+            var submitButton = AssemblyConfiguration.Driver.FindElement(By.Id("loginSubmitButton"));
             submitButton.Click();
         }
     }

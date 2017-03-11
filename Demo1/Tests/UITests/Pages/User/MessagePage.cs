@@ -15,7 +15,7 @@ namespace UITests.Pages.User
 
         public string GetMessage()
         {
-            var message = Driver.GetDriver().FindElement(By.Id("responseMessage"));
+            var message = AssemblyConfiguration.Driver.FindElement(By.Id("responseMessage"));
             return message.Text;
         }
     }

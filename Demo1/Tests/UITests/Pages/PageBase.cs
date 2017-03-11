@@ -1,8 +1,6 @@
-﻿using InfoSupport.Tessler.Core;
-
-namespace UITests.Pages
+﻿namespace UITests.Pages
 {
-    public class PageBase<TPage> : PageObject<TPage> where TPage : PageBase<TPage>
+    public class PageBase<TPage>
     {
     }
 }

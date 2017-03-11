@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using Autofac;
-using InfoSupport.Tessler.Core;
 
 namespace UITests.Pages
 {
@@ -35,11 +34,11 @@ namespace UITests.Pages
         public static T Navigate<T>() where T : IPage, new()
         {
             var instance = new T();
-            var baseUrl = new Uri(TesslerState.GetWebsiteUrl(), UriKind.RelativeOrAbsolute);
+            var baseUrl = new Uri(AssemblyConfiguration.Driver.Url, UriKind.RelativeOrAbsolute);
             var pageUrl = new Uri(baseUrl, instance.GetUrl());
 
             // Navigate to the specified URL in the application
-            TesslerState.GetWebDriver().Navigate().GoToUrl(pageUrl);
+            AssemblyConfiguration.Driver.Navigate().GoToUrl(pageUrl);
 
             return ResolvePage<T>();
         }

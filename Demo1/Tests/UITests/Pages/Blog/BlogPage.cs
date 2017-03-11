@@ -9,14 +9,14 @@ namespace UITests.Pages.Blog
     {
         public List<BlogPart> GetBlogs()
         {
-            var elements = Driver.GetDriver().FindElements(By.ClassName("blog"));
+            var elements = AssemblyConfiguration.Driver.FindElements(By.ClassName("blog"));
 
             return elements.Select(e => new BlogPart(e)).ToList();
         }
 
         public CreateBlogPage CreateBlog()
         {
-            var createBlogText = Driver.GetDriver().FindElement(By.Id("createblog"));
+            var createBlogText = AssemblyConfiguration.Driver.FindElement(By.Id("createblog"));
             createBlogText.Click();
 
             return NavigationHelper.ResolvePage<CreateBlogPage>();

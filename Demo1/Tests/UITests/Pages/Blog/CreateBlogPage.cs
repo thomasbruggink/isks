@@ -22,18 +22,18 @@ namespace UITests.Pages.Blog
 
         public void SubmitBlog()
         {
-            var saveButton = Driver.GetDriver().FindElement(By.Id("blogSubmitButton"));
+            var saveButton = AssemblyConfiguration.Driver.FindElement(By.Id("blogSubmitButton"));
             saveButton.Click();
         }
 
         private IWebElement GetTitleField()
         {
-            return Driver.GetDriver().FindElement(By.Id("titleInputField"));
+            return AssemblyConfiguration.Driver.FindElement(By.Id("titleInputField"));
         }
 
         private IWebElement GetContentField()
         {
-            return Driver.GetDriver().FindElement(By.Id("contentInputField"));
+            return AssemblyConfiguration.Driver.FindElement(By.Id("contentInputField"));
         }
     }
 }
